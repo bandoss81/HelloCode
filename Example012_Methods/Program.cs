@@ -103,7 +103,7 @@ for (int i = 2; i <= 10; i++)
 // а большие "С" заменить маленькими "с".
 
 // Ясна ли задача?
-
+/*
 string text = "- Я думаю, - сказал князь, улыбался, - что, "
             + "ежели бы вас послали вместо нашего милого Винценгероде,"
             + "вы бы взяли приступом согласие прусского короля."
@@ -132,6 +132,73 @@ Console.WriteLine(newText);
 Console.WriteLine();
 newText = Replace(newText, 'к', 'К');
 Console.WriteLine(newText);
+*/
+
+int[] arr = { 1, 5, 4, 3, 6, 7, 1, 1 };
+
+void PrintArray(int[] array)
+{
+    int count = array.Length;
+    for (int i = 0; i < count; i++)
+    {
+         Console.Write($"{array[i]} ");
+    }
+    Console.WriteLine();
+}
+
+void SelectionSort(int[] array)
+{
+    for (int i = 0; i < array.Length - 1 ; i++)
+    {
+        int minPosition = i;
+        
+        for (int j = i + 1; j < array.Length; j++)
+        {
+            if(array[j] < array[minPosition])
+            {
+                minPosition = j;
+            }
+        }
+        int temporary = array[i];
+        array[i] = array[minPosition];
+        array[minPosition] = temporary;
+    }
+}
+
+void SelectionSort2(int[] array)
+{
+    for (int i = 0; i < array.Length - 1 ; i++)
+    {
+        int maxPosition = i;
+        
+        for (int j = i + 1; j < array.Length; j++)
+        {
+            if(array[j] > array[maxPosition])
+            {
+                maxPosition = j;
+            }
+        }
+        int temporary = array[i];
+        array[i] = array[maxPosition];
+        array[maxPosition] = temporary;
+    }
+}
+
+PrintArray(arr);
+SelectionSort(arr);
+
+PrintArray(arr);
+SelectionSort2(arr);
+
+PrintArray(arr);
+
+
+
+
+
+
+
+
 
 
 
