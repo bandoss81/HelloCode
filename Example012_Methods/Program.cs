@@ -103,11 +103,11 @@ for (int i = 2; i <= 10; i++)
 // а большие "С" заменить маленькими "с".
 
 // Ясна ли задача?
-/*
-string text = "- Я думаю, - сказал князь, улыбался, - что, "
-            + "ежели бы вас послали вместо нашего милого Винценгероде,"
-            + "вы бы взяли приступом согласие прусского короля."
-            + "Вы так красноречивы. Вы дайте мне чаю?";
+
+string text = "- Я думаю, - Сказал князь, улыбался, - что, "
+            + "ежели бы ваС послали вместо нашего милого Винценгероде,"
+            + "вы бы взяли приступом Согласие прусского короля."
+            + "Вы так краСноречивы. Вы дайте мне чаю?";
 
 // string s = "qwerty"
 //             012
@@ -132,8 +132,12 @@ Console.WriteLine(newText);
 Console.WriteLine();
 newText = Replace(newText, 'к', 'К');
 Console.WriteLine(newText);
-*/
+Console.WriteLine();
+newText = Replace(newText, 'С', 'с');
+Console.WriteLine(newText);
 
+
+/*
 int[] arr = { 1, 5, 4, 3, 6, 7, 1, 1 };
 
 void PrintArray(int[] array)
@@ -191,7 +195,7 @@ PrintArray(arr);
 SelectionSort2(arr);
 
 PrintArray(arr);
-
+*/
 
 
 
